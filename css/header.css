@@ -1,0 +1,51 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 60px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.header-logo {
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+.menu {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.menu a {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #181818;
+  border-bottom: 2px solid transparent;
+}
+
+.menu a:hover {
+  border-color: #181818;
+  transition: 0.6s;
+}
+
+/* responsividade */
+@media (max-width: 900px) {
+  .header {
+    flex-direction: column;
+    justify-items: center;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    gap: 20px;
+    padding: 20px;
+  }
+  .menu {
+    justify-content: center;
+    gap: 10px;
+  }
+}

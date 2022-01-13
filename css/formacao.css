@@ -1,0 +1,144 @@
+.formacao {
+  background-color: #181818;
+  color: #fff;
+}
+
+.formacao .container {
+  padding: 100px 60px;
+  margin-bottom: 0px;
+  position: relative;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.formacao .container::after {
+  content: '';
+  position: absolute;
+  width: 128px;
+  height: 128px;
+  background-image: url('/img/detalhe.svg');
+  bottom: -60px;
+  left: 140px;
+}
+
+.formacao-titulo {
+  color: #000;
+  max-width: 5ch;
+}
+
+.formacao-descricao {
+  font-size: 1.5rem;
+  margin-bottom: 60px;
+  color: #a3a3a3;
+}
+
+.formacao-descricao strong {
+  color: #fff;
+}
+
+.faculdade {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.faculdade-item {
+  background-color: #000;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex: 1;
+  padding: 20px;
+}
+
+.faculdade-tipo {
+  color: #a3a3a3;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  font-size: 0.875rem;
+}
+
+.faculdade-curso {
+  flex: 1;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.faculdade-curso::before {
+  content: '';
+  width: 4px;
+  height: 22px;
+  background-image: linear-gradient(#4098cc, #90d6ff);
+  position: absolute;
+  left: -24px;
+}
+
+.formacao-extra {
+  grid-column: 2;
+}
+
+.formacao-extra div {
+  margin-bottom: 50px;
+}
+
+.formacao-extra h3 {
+  font-size: 1rem;
+  color: #a3a3a3;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.formacao-extra h3::before {
+  content: '';
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: -4px;
+  left: -44px;
+}
+
+.formacao-extra span {
+  color: #a3a3a3;
+}
+
+.cursos li {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cursos h3::before {
+  background-image: url('/img/cursos.svg');
+}
+
+.idiomas h3::before {
+  background-image: url('/img/idiomas.svg');
+}
+
+/* responsividade */
+@media (max-width: 900px) {
+  .formacao-extra {
+    grid-column: auto;
+  }
+  .formacao .container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .formacao-titulo {
+    word-break: normal;
+    font-size: 3rem;
+  }
+  .formacao .container::after {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .formacao-titulo {
+    font-size: 2rem;
+  }
+  .formacao .container {
+    padding: 20px;
+  }
+}

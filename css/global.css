@@ -1,0 +1,60 @@
+body {
+  margin: 0px;
+  font-size: 1.2rem;
+  font-family: 'Fira sans', Arial, Helvetica, sans-serif;
+  color: #181818;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0px;
+}
+
+ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 60px 100px;
+  padding: 40px;
+  max-width: 1300px;
+  margin: 0 auto;
+  margin-bottom: 180px;
+}
+
+.subtitulo {
+  font-size: 7rem;
+  text-transform: uppercase;
+  color: #a3a3a3;
+  word-break: break-all;
+  max-width: 4ch;
+}
+
+/* resposividade */
+@media (max-width: 600px) {
+  .container {
+    margin-bottom: 80px;
+  }
+}
+
+@media (max-width: 400px) {
+  body {
+    font-size: 1rem;
+  }
+}

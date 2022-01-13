@@ -1,0 +1,89 @@
+.introducao {
+  align-items: center;
+  padding: 60px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.introducao::after {
+  content: '';
+  display: block;
+  background-image: url('/img/setinha.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 57.25px;
+  height: 83px;
+  grid-column: 1 / -1;
+  justify-self: center;
+}
+
+.introducao img {
+  border-radius: 50%;
+}
+
+.introducao-titulo {
+  font-size: 4rem;
+  margin-bottom: 30px;
+}
+
+.introducao-titulo::before {
+  content: '';
+  display: block;
+  width: 200px;
+  height: 3px;
+  background-image: linear-gradient(to right, #39657f, #90d6ff);
+}
+
+.introducao-descricao {
+  grid-column: 2;
+  color: #707070;
+  font-size: 1.5rem;
+}
+
+/* responsividade */
+@media (max-width: 1000px) {
+  .introducao {
+    gap: 60px;
+  }
+  .introducao-titulo {
+    font-size: 3.2rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .introducao {
+    grid-template-columns: 1fr 1fr;
+  }
+  .introducao-titulo {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  .introducao-descricao {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .introducao {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+  .introducao img {
+    display: none;
+  }
+  .introducao-titulo {
+    font-size: 2.8rem;
+  }
+  .introducao::after {
+    display: none;
+  }
+}
+
+@media (max-width: 400px) {
+  .introducao-titulo {
+    font-size: 2rem;
+  }
+  .introducao-descricao {
+    font-size: 0.875rem;
+  }
+}
